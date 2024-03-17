@@ -45,6 +45,9 @@ The first task setting is to find the shortest path from the start to the goal p
 
 [*Note*]: The start node has a pink color, the goal node has a green color, and the obstacles have a black color. When running the A* algorithm, the nodes that are inserted into the open list (min heap) are colored in light blue, and the nodes that are removed and closed are colored in dark blue. The path found by the A* algorithm is colored in light green. Furthermore, if there is no path from the start to the goal position, the program will display a message to the user.
 
+| Default Setting                  |   Solved |
+|---------------------------|---------------------------|
+| <img src="images/setting1_empty.png" alt="Caption for Image 1" style="width: 225px; height: 225px;"> | <img src="images/tasksetting1_hiwiexample.png" alt="Caption for Image 2" style="width: 225px; height: 225px;"> 
 
 ### Task Setting 2 - Waypoint Task
 The second task setting is to find the shortest path from the start to the goal position while visiting a set of waypoints. When the user selects this task setting, the program will prompt the user to specify the number of waypoints. Once this is done, the user can specify the start and goal positions interactively, using the mouse, as in Task Setting 1. Once these are set, the user can left-click on other cells to set waypoints. To remove waypoints, the user can right-click on them. Once the start, goal, and waypoints are set, the user can press the ``Space`` key to run the specified algorithm to find the shortest path. The user can also press the ``C`` key to clear the grid and start over. Furthermore, if there is no path from the start to the goal position, such that all waypoints are visited, the program will display a message to the user.
@@ -60,6 +63,10 @@ It is worth noting that the user can also specify whether to use the [**Held-Kar
 - 1 initial pheromone
 
 The user can change these hyperparameter values through the command line, as mentioned in the ``Usage`` section.
+
+| Default Setting                  |   Solved |
+|---------------------------|---------------------------|
+| <img src="images/setting2_empty.png" alt="Caption for Image 1" style="width: 225px; height: 225px;"> | <img src="images/setting2_hiwiexample.png" alt="Caption for Image 2" style="width: 225px; height: 225px;"> 
 
 ### Task Setting 3 - Coverage Task
 

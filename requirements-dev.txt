@@ -1,0 +1,6 @@
+neovim
+python-lsp-ruff
+pylsp-mypy
+ruff
+mypy
+types-PyYAML

@@ -34,12 +34,16 @@ Mainly, through the command line, one can specify:
 All arguments are optional, and default values will be used if not specified.
 
 ## Task Settings
-Upon running the program, you can choose from three task settings by selecting the corresponding buttons in the top bar. In addition, there is a ``QUIT`` button to exit the program. The available tasks are:
+Upon running the program, you can choose from three task settings by selecting the corresponding buttons in the top bar. In addition, there is a ``QUIT`` button to exit the program. 
+The available tasks are:
 
 
 ### Task Setting 1 - Shortest Path Task
 
 The first task setting is to find the shortest path from the start to the goal position. One can specify the start and goal positions interactively, using the mouse. More specifically, the user can left-click on the grid to set the start and goal positions. Once these are set, the user can left-click on other cells to set obstacles. To remove obstacles, the user can right-click on the obstacles. The start and goal positions can also be removed by right-clicking on them, but then, the following left-click will set the start position, and the next left-click will set the goal position. Once the start and goal positions are set, the user can press the ``Space`` key to run the A* algorithm to find the shortest path. The user can also press the ``C`` key to clear the grid and start over. In this scenario, optimality (in terms of the shortest path) is guaranteed.
+
+[*Note*]: The start node has a pink color, the goal node has a green color, and the obstacles have a black color. When running the A* algorithm, the nodes that are inserted into the open list (min heap) are colored in light blue, and the nodes that are removed and closed are colored in dark blue. The path found by the A* algorithm is colored in light green.
+
 
 ### Task Setting 2 - Waypoint Task
 The second task setting is to find the shortest path from the start to the goal position while visiting a set of waypoints. When the user selects this task setting, the program will prompt the user to specify the number of waypoints. Once this is done, the user can specify the start and goal positions interactively, using the mouse, as in Task Setting 1. Once these are set, the user can left-click on other cells to set waypoints. To remove waypoints, the user can right-click on them. Once the start, goal, and waypoints are set, the user can press the ``Space`` key to run the specified algorithm to find the shortest path. The user can also press the ``C`` key to clear the grid and start over.

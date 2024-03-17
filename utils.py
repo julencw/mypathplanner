@@ -4,6 +4,14 @@ import argparse
 def setup_parser(parser: argparse.ArgumentParser) -> None:
 
     parser.add_argument(
+        "--window_size",
+        type=int,
+        required=False,
+        default=700,
+        help="Size of the window for visualization",
+    )
+
+    parser.add_argument(
         "--rows",
         type=int,
         required=False,

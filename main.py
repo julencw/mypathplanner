@@ -10,8 +10,6 @@ from pathfinding.utils import rearrange_distance_matrix
 from visualization.visualization import TaskSetting, Visualization
 from utils import setup_parser
 
-WINDOW_WIDTH: int = 900
-WINDOW_HEIGHT: int = 960
 TOPBAR_HEIGHT: int = 60
 
 
@@ -104,7 +102,7 @@ def main() -> None:
 
     task_setting: TaskSetting | None = TaskSetting.DEFAULT
     visualization = Visualization(
-        WINDOW_WIDTH, WINDOW_HEIGHT, TOPBAR_HEIGHT, task_setting,
+        args.window_size, args.window_size + TOPBAR_HEIGHT, TOPBAR_HEIGHT, task_setting,
         MAX_ALLOWED_TERRAIN_LEVEL, ELEVATION_STEP,
     )
 
@@ -150,16 +148,16 @@ def main() -> None:
                     pygame.mouse.get_pos()
                 )
                 grid.update_grid(
-                    mouse_position, (WINDOW_WIDTH,
-                                     WINDOW_HEIGHT - TOPBAR_HEIGHT)
+                    mouse_position, (args.window_size,
+                                     args.window_size)
                 )
             elif right_click:
                 mouse_position = visualization.normalize_mouse_position(
                     pygame.mouse.get_pos()
                 )
                 grid.clear_cell(
-                    mouse_position, (WINDOW_WIDTH,
-                                     WINDOW_HEIGHT - TOPBAR_HEIGHT)
+                    mouse_position, (args.window_size,
+                                     args.window_size)
                 )
 
             if event.type == pygame.KEYDOWN:

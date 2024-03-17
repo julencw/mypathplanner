@@ -26,6 +26,7 @@ python main.py
 Use the ``-h`` or ``--help`` option to display available command-line options.
 
 Mainly, through the command line, one can specify:
+- ``--window_size``: Specifies the size of the window. Please note that the window size is fixed, and the grid will be resized to fit the window size. Please, you are encouraged to increase the window size as much as possible to have a better user experience. The default value is 700x700 pixels.
 - ``--rows``: Specifies the number of rows and columns in the grid.
 - ``--K`` Sets a value (between 0 and 1) for the A* algorithm heuristic.
 - ``--deterministic_waypoints``: Determines whether to use the Held-Karp algorithm to find the optimal path in the Waypoint task.
@@ -40,7 +41,7 @@ The available tasks are:
 
 ### Task Setting 1 - Shortest Path Task
 
-The first task setting is to find the shortest path from the start to the goal position. One can specify the start and goal positions interactively, using the mouse. More specifically, the user can left-click on the grid to set the start and goal positions. Once these are set, the user can left-click on other cells to set obstacles. To remove obstacles, the user can right-click on the obstacles. The start and goal positions can also be removed by right-clicking on them, but then, the following left-click will set the start position, and the next left-click will set the goal position. Once the start and goal positions are set, the user can press the ``Space`` key to run the A* algorithm to find the shortest path. The user can also press the ``C`` key to clear the grid and start over. In this scenario, optimality (in terms of the shortest path) is guaranteed.
+The first task setting is to find the shortest path from the start to the goal position. One can specify the start and goal positions interactively, using the mouse. More specifically, the user can left-click on the grid to set the start and goal positions. Once these are set, the user can left-click on other cells to set obstacles. To remove obstacles, the user can right-click on the obstacles. The start and goal positions can also be removed by right-clicking on them, but then, the following left-click will set the start position, and the next left-click will set the goal position. Once the start and goal positions are set, the user can press the ``Space`` key to run the [**A\* algorithm**](https://en.wikipedia.org/wiki/A*_search_algorithm) to find the shortest path. The user can also press the ``C`` key to clear the grid and start over. In this scenario, optimality (in terms of the shortest path) is guaranteed.
 
 [*Note*]: The start node has a pink color, the goal node has a green color, and the obstacles have a black color. When running the A* algorithm, the nodes that are inserted into the open list (min heap) are colored in light blue, and the nodes that are removed and closed are colored in dark blue. The path found by the A* algorithm is colored in light green.
 
@@ -48,7 +49,7 @@ The first task setting is to find the shortest path from the start to the goal p
 ### Task Setting 2 - Waypoint Task
 The second task setting is to find the shortest path from the start to the goal position while visiting a set of waypoints. When the user selects this task setting, the program will prompt the user to specify the number of waypoints. Once this is done, the user can specify the start and goal positions interactively, using the mouse, as in Task Setting 1. Once these are set, the user can left-click on other cells to set waypoints. To remove waypoints, the user can right-click on them. Once the start, goal, and waypoints are set, the user can press the ``Space`` key to run the specified algorithm to find the shortest path. The user can also press the ``C`` key to clear the grid and start over.
 
-It is worth noting that the user can also specify whether to use the Held-Karp algorithm to find the optimal path (in which case, optimality is guaranteed) or to use the Ant Colony Optimisation algorithm to find the path (in which case, the path is not guaranteed to be optimal). By default, the program uses the Ant Colony Optimisation algorithm with the following hyperparameter values:
+It is worth noting that the user can also specify whether to use the [**Held-Karp**](https://en.wikipedia.org/wiki/Held%E2%80%93Karp_algorithm) algorithm to find the optimal path (in which case, optimality is guaranteed) or to use the [**Ant Colony Optimisation algorithm**](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms) to find the path (in which case, the path is not guaranteed to be optimal). By default, the program uses the Ant Colony Optimisation algorithm with the following hyperparameter values:
 
 - 100 epochs
 - 10 ants
@@ -84,4 +85,7 @@ I mainly focused on the path-finding algorithms, and I acknowledge that the user
 
 - While experimenting with task setting 2, I've encountered a scalability issue where the program stops functioning efficiently when the number of waypoints exceeds 30. This isn't due to a failure of the path-finding algorithms—neither the deterministic Held-Karp algorithm nor the Ant Colony Optimization algorithm—but rather the program becomes unresponsive due to inefficiencies in the path reconstruction function. I apologize for this inconvenience. Please understand that my primary focus has been on optimizing the path-finding algorithms themselves, as they are the core of this assignment. However, I acknowledge that I may have overlooked optimization efforts for the path reconstruction function, possibly using suboptimal data structures for storing computed paths.
 
+## Report
+
+In the report (``report.pdf``), I provide a detailed explanation of the algorithms used in the program, highlighting the differences between the algorithms used in the different task settings. 
 

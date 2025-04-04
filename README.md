@@ -124,9 +124,3 @@ In this scenario, the grid has elevation — requiring the algorithm to trade of
 For a full explanation of the algorithms and design rationale, see [`report.pdf`](report.pdf).
 
 ---
-
-## 💬 Feedback
-
-Open an issue or PR to share suggestions or improvements!
-
----
